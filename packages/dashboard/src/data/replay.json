@@ -1,0 +1,343 @@
+{
+ "capturedAt": 1783174541519,
+ "note": "Real casper-test session from July 4, 2026. Every tx hash is verifiable on testnet.cspr.live.",
+ "summary": {
+  "totals": [
+   {
+    "endpoint_id": "quote",
+    "purchases": 72,
+    "revenue": 130500000000,
+    "confirmed": 71
+   }
+  ],
+  "balks": [
+   {
+    "endpoint_id": "quote",
+    "balks": 215
+   }
+  ],
+  "attest": [
+   {
+    "endpoint_id": "quote",
+    "attestations": 8,
+    "confirmed": 8
+   }
+  ],
+  "priceSeries": [
+   {
+    "at": 1783167443186,
+    "price": "500000000",
+    "seq": null,
+    "tx_hash": "16845f0b60bb0e4d72462cd93d30663bfae3197f048d2711fc4fd9f33b2c6565"
+   },
+   {
+    "at": 1783167498470,
+    "price": "2000000000",
+    "seq": null,
+    "tx_hash": "1273af880bcff7e806bc94970d318d20535e4e12c24d5d8cfd0c973249d02eb2"
+   },
+   {
+    "at": 1783167553659,
+    "price": "3000000000",
+    "seq": null,
+    "tx_hash": "0ed2fdbfea5efac6e8c6f2a05b82213a3881be119a515a2a05d42000a9ece5c3"
+   },
+   {
+    "at": 1783167610226,
+    "price": "5000000000",
+    "seq": null,
+    "tx_hash": "14303339409dcc82d0472fb21f793d3b7705ca2c66ebb77a3a9f1a3d3327b40d"
+   },
+   {
+    "at": 1783167666053,
+    "price": "8000000000",
+    "seq": null,
+    "tx_hash": "8b625d7cf32ef8c435345a8fbc60424ad9390c455c185a35e5b7245dfed122b6"
+   },
+   {
+    "at": 1783167721399,
+    "price": "12000000000",
+    "seq": null,
+    "tx_hash": "5abf3672c6228dac581ed2d6ef64d8cb45afff26d09c05fcb0ecf207276a3fd2"
+   },
+   {
+    "at": 1783167777782,
+    "price": "3000000000",
+    "seq": null,
+    "tx_hash": "9d132d150866468bfeda603d567e14d4307969fe1626d76070521cf55aeb3c3c"
+   },
+   {
+    "at": 1783167835316,
+    "price": "12000000000",
+    "seq": null,
+    "tx_hash": "915155a5c0f63edc78abeba849280278b9f4c47026fdecdf90c0dea34a7ec006"
+   }
+  ],
+  "shockMultiplier": 0.6
+ },
+ "feed": [
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3268000000",
+   "at": 1783167865305
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-4",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3972000000",
+   "at": 1783167861996
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-3",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4616000000",
+   "at": 1783167861327
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-2",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4108000000",
+   "at": 1783167861249
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-1",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3784000000",
+   "at": 1783167860662
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-5",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "2696000000",
+   "at": 1783167858998
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3268000000",
+   "at": 1783167857915
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-2",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4108000000",
+   "at": 1783167856510
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-3",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4616000000",
+   "at": 1783167855931
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-4",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3972000000",
+   "at": 1783167854691
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3268000000",
+   "at": 1783167854209
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-5",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "2696000000",
+   "at": 1783167852191
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-1",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3784000000",
+   "at": 1783167851889
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-4",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3972000000",
+   "at": 1783167849286
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-2",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4108000000",
+   "at": 1783167849268
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3268000000",
+   "at": 1783167847530
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-3",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4616000000",
+   "at": 1783167847126
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-5",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "2696000000",
+   "at": 1783167845314
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-1",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3784000000",
+   "at": 1783167844346
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-4",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3972000000",
+   "at": 1783167841780
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-5",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "2696000000",
+   "at": 1783167841444
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-3",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4616000000",
+   "at": 1783167841255
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-2",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4108000000",
+   "at": 1783167840734
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3268000000",
+   "at": 1783167840044
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-1",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3784000000",
+   "at": 1783167838551
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-5",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "2696000000",
+   "at": 1783167837963
+  },
+  {
+   "kind": "attestation",
+   "endpoint_id": "quote",
+   "old_price_motes": "3000000000",
+   "new_price_motes": "12000000000",
+   "stats_hash": "b15f7f4154b169dc7eaa14d58b788697d2d4ac971dbec54b60e3aaa000858bef",
+   "seq": null,
+   "tx_hash": "915155a5c0f63edc78abeba849280278b9f4c47026fdecdf90c0dea34a7ec006",
+   "narration": "Window closed at 3 OJA: 11/19 bought, revenue 33 OJA. Moving 3 -> 12 to probe the demand curve.",
+   "window_stats": "{\"endpointId\":\"quote\",\"fromMs\":1783167777788,\"toMs\":1783167822793,\"priceMotes\":\"3000000000\",\"observations\":19,\"purchases\":11,\"balks\":8,\"revenueMotes\":\"33000000000\"}",
+   "confirmed": 1,
+   "at": 1783167835316
+  },
+  {
+   "kind": "purchase",
+   "buyer_id": "buyer-6",
+   "endpoint_id": "quote",
+   "price_motes": "3000000000",
+   "tx_hash": "b551cec45251672d0fffbaa2596ee1ce9f4fe7f131dfc9ed17fda69ce0d8d735",
+   "confirmed": 1,
+   "at": 1783167834584
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-4",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3972000000",
+   "at": 1783167833500
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-1",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "3784000000",
+   "at": 1783167833390
+  },
+  {
+   "kind": "balk",
+   "buyer_id": "buyer-3",
+   "endpoint_id": "quote",
+   "price_motes": "12000000000",
+   "valuation_motes": "4616000000",
+   "at": 1783167832929
+  },
+  {
+   "kind": "purchase",
+   "buyer_id": "buyer-2",
+   "endpoint_id": "quote",
+   "price_motes": "3000000000",
+   "tx_hash": "cdccab292a54ad07a89b2170b1d5ee978740ac6a3771202e438da64e034daab7",
+   "confirmed": 1,
+   "at": 1783167832615
+  }
+ ]
+}

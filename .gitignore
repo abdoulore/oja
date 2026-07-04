@@ -1,0 +1,11 @@
+node_modules/
+dist/
+target/
+.env
+keys/
+*.pem
+/data/
+.vercel/
+spike-checklist.md
+.cache/
+Cargo.lock

@@ -1,0 +1,65 @@
+[package]
+name = "oja-contracts"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+odra = "2.8.0"
+odra-modules = "2.8.0"
+odra-casper-livenet-env = { version = "2.8.0", optional = true }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+odra-build = "2.8.0"
+
+[dev-dependencies]
+odra-test = "2.8.0"
+
+[build-dependencies]
+odra-build = "2.8.0"
+
+[features]
+default = []
+livenet = ["dep:odra-casper-livenet-env"]
+
+[[bin]]
+name = "oja_contracts_build_contract"
+path = "bin/build_contract.rs"
+test = false
+
+[[bin]]
+name = "oja_contracts_build_schema"
+path = "bin/build_schema.rs"
+test = false
+
+[[bin]]
+name = "deploy_registry"
+path = "bin/deploy_registry.rs"
+required-features = ["livenet"]
+test = false
+
+[[bin]]
+name = "register_endpoint"
+path = "bin/register_endpoint.rs"
+required-features = ["livenet"]
+test = false
+
+[[bin]]
+name = "attest"
+path = "bin/attest.rs"
+required-features = ["livenet"]
+test = false
+
+[[bin]]
+name = "fund"
+path = "bin/fund.rs"
+required-features = ["livenet"]
+test = false
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

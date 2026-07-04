@@ -1,0 +1,2 @@
+[[contracts]]
+fqn = "price_registry::PriceRegistry"

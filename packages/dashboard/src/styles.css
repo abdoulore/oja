@@ -1,0 +1,50 @@
+/* ỌJÀ token system. Ink field, phosphor money, amber prices, violet attestations.
+   Dark-locked terminal market. Radius 0 everywhere: the terminal is the identity. */
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0e13;
+  --color-panel: #10161f;
+  --color-panel-2: #0d1219;
+  --color-grid: #1c2733;
+  --color-body: #c8d3de;
+  --color-dim: #5a6b7b;
+  --color-money: #2ee59d;
+  --color-amber: #f5a742;
+  --color-violet: #a78bfa;
+  --color-alert: #ff6b6b;
+
+  --font-display: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius: 0px;
+}
+
+html {
+  scrollbar-color: var(--color-grid) var(--color-ink);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 70% -10%, #101a26 0%, transparent 60%),
+    var(--color-ink);
+  color: var(--color-body);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(245, 167, 66, 0.25);
+}
+
+/* Focus visibility on a dark field */
+:focus-visible {
+  outline: 1px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+/* Recharts inherits */
+.recharts-wrapper {
+  font-family: var(--font-mono);
+}

@@ -1,0 +1,1 @@
+{ "name": "@oja/shared", "private": true, "type": "module", "main": "src/env.ts" }

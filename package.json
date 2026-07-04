@@ -1,0 +1,35 @@
+{
+  "name": "oja",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "facilitator": "tsx packages/facilitator/src/index.ts",
+    "provider": "tsx packages/provider/src/index.ts",
+    "indexer": "tsx packages/indexer/src/index.ts",
+    "buyers": "tsx packages/agents/src/buyers.ts",
+    "pricing-agent": "tsx packages/agents/src/pricing-agent.ts",
+    "dashboard": "npm --workspace packages/dashboard run dev",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "node scripts/run-all.mjs"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@make-software/casper-x402": "^1.0.0",
+    "@x402/core": "^2.17.0",
+    "@x402/express": "^2.17.0",
+    "@x402/fetch": "^2.17.0",
+    "casper-js-sdk": "^5.0.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0"
+  }
+}
