@@ -241,6 +241,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="flex flex-col gap-2 text-[12px]">
+            <ProofLink href="https://github.com/abdoulore/oja">Source on GitHub</ProofLink>
             <ProofLink href={`${EXPLORER_PKG}${REGISTRY_PACKAGE}`}>PriceRegistry</ProofLink>
             <ProofLink href={`${EXPLORER_PKG}${TOKEN_PACKAGE}`}>OJA token</ProofLink>
             <ProofLink href="https://github.com/make-software/casper-x402">

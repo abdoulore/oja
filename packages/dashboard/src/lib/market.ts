@@ -86,6 +86,14 @@ const REPLAY: Pick<MarketData, "summary" | "feed"> = {
   feed: replay.feed as unknown as FeedEvent[],
 };
 
+// Only poll the local stack when the page itself is served from localhost, or
+// when a public data URL is configured explicitly. A deployed page probing a
+// visitor's localhost triggers the browser's local-network permission prompt.
+const CAN_POLL =
+  typeof window === "undefined" ||
+  ["localhost", "127.0.0.1"].includes(window.location.hostname) ||
+  Boolean(import.meta.env.VITE_INDEXER_URL);
+
 export function useMarketData(pollMs = 3000): MarketData {
   const [data, setData] = useState<MarketData>({
     ...REPLAY,
@@ -94,6 +102,7 @@ export function useMarketData(pollMs = 3000): MarketData {
   });
 
   useEffect(() => {
+    if (!CAN_POLL) return;
     let alive = true;
     async function poll() {
       try {
