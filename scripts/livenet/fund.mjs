@@ -25,7 +25,7 @@ const tx = new ContractCallBuilder()
     }),
   )
   .chainName(CHAIN)
-  .payment(2_500_000_000) // plain cep18 transfer; no signature verification on-chain
+  .payment(5_000_000_000) // plain cep18 transfer; casper-test V1 minimum limit needs headroom
   .build();
 tx.sign(deployer);
 

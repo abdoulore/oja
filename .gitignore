@@ -7,5 +7,7 @@ keys/
 /data/
 .vercel/
 spike-checklist.md
+*.mp4
+scripts/demo/
 .cache/
 Cargo.lock

@@ -35,7 +35,7 @@ for (const dir of readdirSync(BUYERS_DIR)) {
       }),
     )
     .chainName(CHAIN)
-    .payment(2_500_000_000)
+    .payment(5_000_000_000) // cep18 transfer; casper-test V1 minimum limit needs headroom
     .build();
   tx.sign(deployer);
   await submitAndWait(client, tx, { label: `fund ${dir}` });

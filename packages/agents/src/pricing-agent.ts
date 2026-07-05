@@ -160,6 +160,17 @@ async function narrate(stats: WindowStats, oldPrice: string, newPrice: string): 
       ? `Holding price.`
       : `Moving ${motesToTokens(oldPrice)} -> ${motesToTokens(newPrice)} to probe the demand curve.`);
   if (!base || !key) return fallback;
+  // Hand the model human units (OJA), never raw motes, so it doesn't narrate
+  // "2 billion motes" when it means "2 OJA".
+  const window = {
+    priceOja: Number(motesToTokens(stats.priceMotes)),
+    observations: stats.observations,
+    purchases: stats.purchases,
+    balks: stats.balks,
+    revenueOja: Number(motesToTokens(stats.revenueMotes)),
+    oldPriceOja: Number(motesToTokens(oldPrice)),
+    newPriceOja: Number(motesToTokens(newPrice)),
+  };
   try {
     const r = await fetch(`${base.replace(/\/$/, "")}/v1/chat/completions`, {
       method: "POST",
@@ -171,12 +182,14 @@ async function narrate(stats: WindowStats, oldPrice: string, newPrice: string): 
           {
             role: "system",
             content:
-              "You are the pricing agent for a pay-per-request API. In one plain sentence, " +
-              "explain the price decision from the stats. No hedging, no emojis.",
+              "You are the pricing agent for a pay-per-request API priced in OJA tokens. " +
+              "In one plain sentence, explain the price decision from the window stats. " +
+              "Always state prices and revenue in OJA (e.g. \"2 OJA\"), never in motes or " +
+              "raw numbers. No hedging, no emojis.",
           },
           {
             role: "user",
-            content: JSON.stringify({ stats, oldPrice, newPrice }),
+            content: JSON.stringify(window),
           },
         ],
       }),

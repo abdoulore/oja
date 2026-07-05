@@ -28,7 +28,7 @@ const tx = new ContractCallBuilder()
     }),
   )
   .chainName(CHAIN)
-  .payment(1_000_000_000) // measured consumption ~0.57 CSPR; 75%-refund chain penalizes headroom
+  .payment(3_000_000_000) // consumption ~0.57 CSPR but casper-test enforces a V1 minimum limit; 1e9 is rejected as "Invalid payment amount"
   .build();
 tx.sign(deployer);
 
