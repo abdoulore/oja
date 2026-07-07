@@ -90,6 +90,15 @@ Optional LLM narration: set `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` (any Open
 
 Start the market. The tape fills with PAID and BALK rows at the opening price. Watch the agent walk the ladder: it tries a rung per window, revenue per window is its reward, and the amber price line staircases toward the revenue-maximizing rung, each step pinned by a violet on-chain attestation and a one-sentence explanation in the agent log. Hit **bust ×0.6**. Buyers get poorer, conversion collapses, and the agent walks the price back down and settles on a new optimum. Click any row and read the same transaction on cspr.live.
 
+## Testing playbook (5 minutes, no local setup)
+
+1. Open https://oja-sepia.vercel.app. With no local stack it shows a **replay of a real recorded casper-test session**; the badge reads `REPLAY`.
+2. In the proof strip, click **PriceRegistry contract** and **OJA token contract**. Both open the deployed contract packages on testnet.cspr.live.
+3. Go to the market page (button `Open the live market`). Click any `PAID` or `ATTEST` row with a green `chain` mark. Each opens the actual transaction on cspr.live; compare amounts and entry points (`transfer_with_authorization`, `attest_price`) with what the row claims.
+4. In the pricing agent log, each entry shows the window stats the agent saw and its reasoning; the `attested` link goes to the on-chain attestation for that decision.
+
+To test the live market end to end, follow the Quickstart below (about 15 minutes including faucet time), then run `npm run demo` and `npm run dashboard`. Press `bust x0.6` on the market page and watch conversion collapse and the agent walk the price down over the next few windows.
+
 ## Buildathon qualification mapping
 
 Builder Merit Path requires a working prototype on Casper Testnet with a transaction-producing on-chain component. Ọjà produces two independent transaction streams: x402 settlements (`transfer_with_authorization` on the CEP-18 token) for every purchase, and `attest_price` calls on the PriceRegistry for every price move. The stack is the buildathon's own: x402 protocol end to end, the sponsored CSPR.cloud facilitator, Odra 2.8 contract with standard events (CSPR.cloud-indexable), official `@make-software/casper-x402` packages, deployed and confirmed on casper-test.

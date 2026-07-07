@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck (services, agents, shared)
+        run: npm run typecheck
+
+      - name: Typecheck (dashboard)
+        run: npx tsc -p packages/dashboard/tsconfig.json --noEmit
+
+      - name: Build dashboard
+        run: npm run build -w packages/dashboard
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
