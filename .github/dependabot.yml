@@ -1,18 +1,23 @@
 version: 2
+# open-pull-requests-limit: 0 disables routine version-bump PRs while still
+# allowing Dependabot SECURITY updates (which bypass the limit) to be filed.
+# Keeps the repo quiet during the buildathon judging freeze; raise the limit
+# after judging to resume dependency-version PRs.
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
 
   - package-ecosystem: "cargo"
     directory: "/contracts"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 0
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 0
